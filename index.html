@@ -2,15 +2,22 @@
 <html lang="tr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#1b1030" />
     <title>Hopstorm</title>
     <style>
-      html, body { margin: 0; height: 100%; background: #1b1030; overflow: hidden; }
+      html, body { margin: 0; height: 100%; background: #1b1030; overflow: hidden; touch-action: none; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
       #game { width: 100%; height: 100%; }
+      #rotate { display: none; position: fixed; inset: 0; background: #1b1030; color: #ffd36b; font: bold 22px monospace; text-align: center; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; z-index: 10; }
+      /* phones held upright: ask to turn the phone */
+      @media (orientation: portrait) and (max-width: 900px) { #rotate { display: flex; } }
     </style>
-    <script type="module" crossorigin src="./assets/index-hdXiGsGn.js"></script>
+    <script type="module" crossorigin src="./assets/index-BWecRyBq.js"></script>
   </head>
   <body>
     <div id="game"></div>
+    <div id="rotate">⟳ Telefonu yan çevir<br />Turn your phone sideways</div>
   </body>
 </html>
